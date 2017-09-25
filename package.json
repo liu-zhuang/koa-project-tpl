@@ -4,10 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development ./node_modules/nodemon/bin/nodemon app.js",
-    "test": "NODE_ENV=test ./node_modules/nodemon/bin/nodemon app.js",
-    "prd": "NODE_ENV=production ./node_modules/nodemon/bin/nodemon app.js",
+    "dev": "set DEBUG=dev&&set NODE_ENV=development&&nodemon app.js",
+    "test": "NODE_ENV=test, nodemon app.js",
+    "prd": "NODE_ENV=production DEBUG=err, nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,12 +14,14 @@
     "commander": "^2.11.0",
     "debug": "^3.0.1",
     "koa": "^2.3.0",
-    "koa-logger": "^3.0.1",
     "koa-onerror": "^3.1.0",
-    "koa-resource-router": "^0.4.0",
-    "koa-response-time": "^2.0.0",
     "koa-router": "^7.2.1",
+    "koa2-cors": "^2.0.3",
     "log4js": "^2.3.3",
+    "moment": "^2.18.1",
     "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "koa-helmet": "^3.2.0"
   }
 }

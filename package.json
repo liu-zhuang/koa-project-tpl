@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "set DEBUG=dev&&set NODE_ENV=development&&nodemon app.js",
+    "dev": "NODE_ENV=development DEBUG=dev nodemon app.js",
     "test": "NODE_ENV=test, nodemon app.js",
     "prd": "NODE_ENV=production DEBUG=err, nodemon app.js"
   },

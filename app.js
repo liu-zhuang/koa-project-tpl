@@ -17,14 +17,14 @@ const router = require('./util/routerUtil.js')('controllers');
 const app = new Koa();
 
 // 错误处理
-// onerror(app,{
-// 	all: (err,ctx) => {
-// 		// 记录日志
-// 		logger.error(ctx, err);
-// 		// 页面打印错误
-// 		ctx.response.body = 'error';
-// 	}
-// });
+onerror(app,{
+	all: (err,ctx) => {
+		// 记录日志
+		logger.error(ctx, err);
+		// 页面打印错误
+		ctx.response.body = 'error';
+	}
+});
 devLog('booting server...');
 logger.debug({
 	msg: 'botting server..a.'
